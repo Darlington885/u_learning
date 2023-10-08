@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "506066913326",
+    "project_id": "ulearning-333de",
+    "storage_bucket": "ulearning-333de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:506066913326:android:75c9e9dfab5f480418f7bf",
+        "android_client_info": {
+          "package_name": "com.dialadarlington.ulearning_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVUJr53ciSjr2TS_mXhRxcS1s8pfmktZM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
