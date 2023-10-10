@@ -1,3 +1,5 @@
+import 'package:ulearning_app/common/entities/course.dart';
+
 abstract class HomePageEvents{
 
   const HomePageEvents();
@@ -9,6 +11,7 @@ class HomePageDots extends HomePageEvents{
 }
 
 class HomePageCourseItem extends HomePageEvents{
-  final int courseItem;
-  HomePageCourseItem(this.courseItem);
+  const HomePageCourseItem(this.courseItem);
+  final List<CourseItem> courseItem;
+
 }

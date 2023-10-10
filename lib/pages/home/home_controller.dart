@@ -4,6 +4,7 @@ import 'package:ulearning_app/common/entities/entities.dart';
 import 'package:ulearning_app/global.dart';
 import 'package:ulearning_app/pages/home/bloc/home_page_blocs.dart';
 
+import '../../common/apis/course_api.dart';
 import 'bloc/home_page_events.dart';
 
 class HomeController{
@@ -17,9 +18,9 @@ class HomeController{
 
     // make sure that user is logged in and then make an api call
     if(Global.storageService.getUserToken().isNotEmpty) {
-      var result = await CourseApi.courseList();
+      var result = await CourseAPI.courseList();
       if (result.code == 200) {
-        context.read<HomePageBlocs>().add(HomePageCourseItem(result.data));
+        context.read<HomePageBlocs>().add(HomePageCourseItem(result.data!));
       } else {
         print(result.code);
       }

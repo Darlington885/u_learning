@@ -33,6 +33,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.white,
         appBar: buildAppBar(_homeController.userProfile!.avatar.toString()),
         body: BlocBuilder<HomePageBlocs, HomePageStates>(builder: (context, state){
+         // print(state.courseItem[0].name);
           return Container(
             margin: EdgeInsets.symmetric(vertical: 0, horizontal: 25.w),
             child: CustomScrollView(
@@ -56,11 +57,11 @@ class _HomePageState extends State<HomePage> {
                     padding: EdgeInsets.symmetric(vertical: 18.h, horizontal: 0.w),
                     sliver: SliverGrid(
                         delegate: SliverChildBuilderDelegate(
-                            childCount: 4,
+                            childCount: state.courseItem.length,
                                 (BuildContext context, int index){
                               return GestureDetector(
                                 onTap: (){},
-                                child: courseGrid(),
+                                child: courseGrid(state.courseItem[index]),
                               );
                             }),
                         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

@@ -6,7 +6,7 @@ import 'package:ulearning_app/pages/home/bloc/home_page_states.dart';
 class HomePageBlocs extends Bloc<HomePageEvents, HomePageStates>{
   HomePageBlocs():super(const HomePageStates()){
     on<HomePageDots>(_homePageDots);
-    on<HomePageCourseItem>(_homePageCourseItem);
+    on<HomePageCourseItem>(_homePageCourseItem); // This is how we register an event in bloc
   }
 
   void _homePageDots(HomePageDots event, Emitter<HomePageStates> emit){

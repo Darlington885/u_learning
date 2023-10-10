@@ -110,7 +110,8 @@ class SignInController {
 
       if(result.code==200){
         try{
-        Global.storageService.setString(AppConstants.STORAGE_USER_PROFILE_KEY, jsonEncode(result.data!));
+          Global.storageService.setString(AppConstants.STORAGE_USER_PROFILE_KEY, jsonEncode(result.data!));
+          // used for authorization, that's why we saved it.
           Global.storageService.setString(AppConstants.STORAGE_USER_TOKEN_KEY, result.data!.access_token!);
           EasyLoading.dismiss(); // This is used to stop the circularProgressIndicator
           Navigator.of(context).pushNamedAndRemoveUntil('/application', (route) => false);
